@@ -1,0 +1,185 @@
+/*   Анимация зонной диаграммы и ВАХ
+     p-n перехода при прямом и обратном напряжении
+     Напряжение изменяется слайдером
+
+     Tarasov  2019  MISiS                        */
+#animation{
+  font-family: sans-serif;
+  position: relative;
+  margin: 10px;
+  margin-top: 0px;
+  display: flex;}
+#n_type
+  {
+    position: relative;
+    left: 50px;
+    top: 200px;}
+
+#p_type
+  {
+    position: relative;
+    left: 150px;
+    top: 200px;
+    }
+
+.mode {
+    top:-25px;
+    position: absolute;
+    left: 0px;
+    font-size: 80%;}
+
+.mode2 {
+    top:-25px;
+    position: absolute;
+    left: 0px;
+    font-size: 80%;}
+#input
+{
+    position: absolute;
+    top: -80px;
+    left: 120px;
+    z-index: 2;}
+
+#voltsI
+  {
+    position: absolute;
+    top: -107px;
+    left: 58px;
+    width: 300px;
+    text-align: center;}
+
+#n_type{background-color:whitesmoke;
+    /*Размер левого графика + граница*/
+    width: 402px;
+    height: 402px;}
+
+#p_type{background-color:whitesmoke;
+    /*Размер левого графика + граница*/
+    width: 402px;
+    height: 402px;}
+
+.canvas{border: 2px solid black;
+    /*Размер левого графика*/
+    width: 400px;
+    height: 400px;}
+
+.carriers{
+    /*Размер левого графика*/
+    width: 400px;
+    height: 400px;}
+
+#fermi_level_metal{
+    position: absolute;
+    font-weight: bold;}
+
+#mds{
+    position: relative;
+    width:400px;
+    top:400px;
+    padding: 10px;
+    font-size: 80%;}
+
+#m {
+    position: absolute;
+    left: 20px;}
+
+
+#d {
+    position: absolute;
+    left:30%;}
+
+#s {
+    position: absolute;
+    right: 70px;}
+
+#input2
+  {
+    position: absolute;
+    top: -80px;
+    left: 120px;
+    z-index: 2;}
+
+#voltsII
+    {
+      position: absolute;
+      top: -107px;
+      left: 58px;
+      width: 300px;
+      text-align: center;}
+#fermi_level_metal2{
+      position: absolute;
+      font-weight: bold;}
+
+#mds2{
+      position: relative;
+      width:400px;
+      top:400px;
+      padding: 10px;
+      font-size: 80%;}
+
+#m2 {
+      position: absolute;
+      left: 20px;}
+
+
+#d2 {
+      position: absolute;
+      left:30%;}
+
+#s2 {
+      position: absolute;
+      right: 70px;}
+
+.slider
+{
+  width: 150px;
+  height: 20px;
+  border: 2px solid black;
+  border-radius: 0.1em ;
+  /*Градиент на слайдере выглядит забавно*/
+  /*background-image: linear-gradient(90deg, black, white, black);*/
+  box-shadow: inset 0 0 0.05em rgba(0, 0, 0, 0.6);
+  -webkit-appearance: none;
+          appearance: none;}
+
+.slider::-webkit-slider-thumb
+{
+
+  width: 25px;
+  height: 25px;
+  border-radius: 0.08em;
+  background-image: radial-gradient(#eee, #ccc);
+  filter: drop-shadow(0.02em 0.02em 0.02em rgba(0, 0, 0, 0.5));
+  cursor: pointer;
+  -webkit-appearance: none;
+          appearance: none;}
+
+.slider::-moz-range-thumb
+{
+  border-radius: 0.08em;
+  background-image: radial-gradient(#eee, #bbb);
+  filter: drop-shadow(0.02em 0.02em 0.02em rgba(0, 0, 0, 0.5));
+  cursor: pointer;
+  border: none;
+  -moz-appearance: none;
+       appearance: none;}
+
+.voltage
+{
+  position: absolute;
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  margin-top: 0.45em;
+  color: #111;
+  text-shadow: 0.02em 0.02em 0.02em rgba(0, 0, 0, 0.1);}
+
+.carriers
+{
+  position: absolute;
+  z-index:2;}
+
+.canvas
+{
+  position: absolute;
+  z-index: 3;}

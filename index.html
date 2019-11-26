@@ -1,0 +1,76 @@
+<!-- Анимации зонных диаграмм для МДП структур
+     c полупроводниками p и n типа
+     Напряжение изменяется слайдером
+     Цвета для анимации можно задать через HTML или напрямую
+     в соответсвующие переменные вверху js файла
+
+     Tarasov  2019  MISiS
+-->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <title>МДП структура</title>
+    <meta charset="UTF-8">
+    <!-- href = путь к css файлу (навание если в одной директории с html)-->
+    <link rel="stylesheet" type="text/css" href="Animation_mdp.css">
+</head>
+<body>
+<!--Контейнер с двумя анимациями-->
+<div id="animation">
+    <!-- slider value 150 == 0 volts-->
+    <!-- РАЗМЕРЫ МЕНЯТЬ ВВЕРХУ CSS ФАЙЛА-->
+
+    <!--Зонная диаграмма и слайдер n - тип -->
+    <div id="n_type">
+        <div id="input"><input id="n_type_slider" type="range" class="slider" min="90" max="200" value="150" aria-label="Voltage"/></div>
+        <div class="voltage" id = 'voltsI' style="color:#333;" > <span class="voltsI" style="color:#808080;">0</span> В</div>
+        <div id=fermi_level_metal style="color:#4ca3dd;"> F</div>
+        <div class="mode" style="color:#333;">Состояние плоских зон</div>
+        <canvas class ="carriers" id="n_type_carriers"></canvas>
+        <canvas class ="canvas" id="canvas1" width="500px"; height= "500px";></canvas>
+        <div id=mds>
+          <div id=m style="color:#4ca3dd;"> металл </div>
+          <div id=d style="color:#808080;"> диэлектрик </div>
+          <div id=s style="color:#cbbeb5;"> полупроводник </div>
+        </div>
+    </div>
+    <!--Зонная диаграмма и слайдер p - тип -->
+    <div id="p_type">
+        <div id="input2"><input id="p_type_slider" type="range" class="slider" min="100" max="210" value="150" aria-label="Voltage"/></div>
+        <div class="voltage" id = 'voltsII' style="color:#333;" > <span class="voltsII" style="color:#808080;">0</span> В</div>
+        <div id=fermi_level_metal2 style="color:#4ca3dd;"> F</div>
+        <div class="mode2" style="color:#333;">Состояние плоских зон</div>
+        <canvas class="carriers" id="p_type_carriers"></canvas>
+        <canvas class="canvas" id="canvas2" width="500px"; height= "500px";></canvas>
+        <div id=mds2>
+          <div id=m2 style="color:#4ca3dd;"> металл </div>
+          <div id=d2 style="color:#808080;"> диэлектрик </div>
+          <div id=s2 style="color:#cbbeb5;"> полупроводник </div>
+        </div>
+    </div>
+
+
+    <!--Цвета для анимации-->
+    <style>
+      #n_type{background-color:#f4f4f4;}
+      #fermi_level_metal{color:#4ca3dd;}
+    </style>
+
+    <div id='dielectric_fill' style="color:#808080;"></div>
+    <div id='dielectric_border' style="color:#333;"></div>
+    <div id='Eg_border' style="color:#333333;"></div>
+    <div id='Eg_fill' style="color:floralwhite;"></div>
+
+    <div id='electrons' style="color:skyblue;"></div>
+    <div id='electrons_border' style="color:black;"></div>
+    <div id='holes' style="color:pink;"></div>
+    <div id='holes_border' style="color:black;"></div>
+
+    <div id='fermi_level' style="color:#fa8072;"></div>
+    <div id='Ei_level' style="color:#a0db8e;"></div>
+
+</div>
+<!-- src = путь к js файлу (навание если в одной директории с html)  -->
+    <script src="Animation_mdp.js"></script>
+</body>
+</html>
