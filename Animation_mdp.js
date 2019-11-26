@@ -116,7 +116,7 @@ Ball.prototype.update = function(){
         this.velY = random(-3,3)
       }
 
-      if ((this.y>=Math.exp((-this.x+230+(s-160)*2.8)/30)+200-this.size)&&this.x<280+(s-150)&&s>=150){
+      if ((this.y>=Math.exp((-this.x+250+(s-160)*2.8)/30)+200-this.size)&&this.x<280+(s-150)&&s>=150){
         this.velY = -random(0,3)
         this.velX = random(-3,3)
       }
@@ -282,13 +282,12 @@ Ball.prototype.update = function(){
           this.velX = -random(0,3)
           this.velY = random(-3,3)
         }
-        if(this.id<=s2-200&&s2<=150)
+        if(this.id<=(s2-100)&&s2<=150)
         {
-
           this.color=disappearance_color
           this.b_color=disappearance_color
         }
-        if(this.id<=35+(s2-150)&&s2>150)
+        if(this.id<=35+(s2-150)&&s2>=150)
         {
 
           this.color=disappearance_color
@@ -327,7 +326,7 @@ Ball.prototype.update = function(){
           }
 
 
-          if ((this.y<=Math.exp((-this.x+230+(s2-165)*2.8)/30)+405+this.size)&&this.x<=330&&s2>150){
+          if ((this.y<=Math.exp((-this.x+250+(s2-165)*2.8)/30)+396+this.size)&&this.x<=330&&s2>150){
             this.velY = random(0,3)
             this.velX = random(0,3)
           }
